@@ -1,0 +1,19 @@
+@import "compass/reset";
+
+.rainbow {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+
+@mixin breakpoint($val, $val_in_px) {
+	@media (min-width: $val_in_px) {
+		.rainbow {
+			background: unquote('hsl(#{$val}, 100%, 50%)');
+		}
+	}
+}
+
+@for $i from 0 through 3000 {
+	@include breakpoint(#{$i % 360}, #{$i}px);
+}

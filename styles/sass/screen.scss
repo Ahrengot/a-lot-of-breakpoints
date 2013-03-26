@@ -35,5 +35,5 @@ $max: 2500;
 }
 
 @for $i from $min through $max {
-	@include breakpoint(#{($i / $max) * 100}, #{($i / $max) * 100}, #{($i / $max) * 100}, #{$i}px);
+	@include breakpoint(#{($i / $max) * 360}, #{($i / $max) * 100}, #{($i / $max) * 100}, #{$i}px);
 }
